@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rules — RMC</title>
+<meta name="description" content="Regulamento completo do RMC: procedimento de corrida, código desportivo, sistema de pontos e apoio técnico.">
+<meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html"><b>RMC</b><span>rFactor Multi Champ's</span></a>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="standings.html">Drivers</a>
+    <a href="teams.html">Teams</a>
+    <a href="results.html">Results</a>
+    <a class="active" href="rules.html">Rules</a>
+  </nav>
+  <a class="discord" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Discord<span>↗</span></a>
+  <button class="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+</header>
+
+<main id="top">
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Rules</div>
+  <h1>Everything you<br><em>need to know.</em></h1>
+  <p>The full RMC sporting code — race night procedure, driving standards, points, and where to get help.</p>
+  <div class="page-hero-number" aria-hidden="true">04</div>
+</section>
+
+<section class="section rules reveal">
+  <div class="rules-grid">
+    <article><b>01</b><h3>Race night</h3><p>Join the official server before the scheduled briefing. Drivers must be present for the grid procedure.</p><a href="#full-rules">Read regulations →</a></article>
+    <article><b>02</b><h3>Sporting code</h3><p>Respectful, predictable driving. Incidents are reviewed by race control and penalties can affect championship points.</p><a href="#full-rules">Read regulations →</a></article>
+    <article><b>03</b><h3>Points & results</h3><p>Finishing positions automatically feed the championship. Every point can decide the title at Le Mans.</p><a href="standings.html">See standings →</a></article>
+    <article><b>04</b><h3>Technical help</h3><p>Missing content, connection problems or setup questions? Get help from the RMC community before race night.</p><a href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Open Discord →</a></article>
+  </div>
+</section>
+
+<section class="section reveal" id="full-rules">
+  <div class="rules-full">
+    <h2>01 · Race night procedure</h2>
+    <ol>
+      <li><strong>Server join.</strong> Connect to the official RMC server at least 15 minutes before the scheduled briefing time.</li>
+      <li><strong>Briefing.</strong> Attend the voice briefing on Discord. Grid order, weather, and any last-minute notes are announced here.</li>
+      <li><strong>Formation & grid.</strong> Line up in qualifying order. No overtaking before the green flag.</li>
+      <li><strong>Race start.</strong> Standing or rolling start as announced per round. Jump-starts are reviewed post-race.</li>
+    </ol>
+
+    <h2>02 · Sporting code</h2>
+    <ul>
+      <li><strong>Driving standard.</strong> Predictable, respectful racing. Give racing room on the inside of a corner when overlapped.</li>
+      <li><strong>Incidents.</strong> Contact that ends another driver's race is reviewed by race control regardless of intent.</li>
+      <li><strong>Penalties.</strong> Time penalties, grid drops, or points deductions may apply depending on severity and history.</li>
+      <li><strong>Blue flags.</strong> Lapped cars must yield to the leaders without unnecessarily blocking the racing line.</li>
+    </ul>
+
+    <h2>03 · Points & championship</h2>
+    <ul>
+      <li>Points are awarded down to <strong>30th place</strong>, combining the race result with the qualifying result for that round.</li>
+      <li>Championship position is decided by <strong>total points</strong> across all seven rounds.</li>
+      <li>Ties are broken by <strong>most race wins</strong>, then by most pole positions, then most second-place finishes.</li>
+      <li>The <strong>Teams' Championship</strong> is the sum of every driver's points for that team, round by round — every driver on the roster contributes.</li>
+      <li>Results are posted on the <a href="results.html">Results page</a> shortly after each round.</li>
+    </ul>
+    <div class="points-table" id="pointsTable"></div>
+
+    <h2>04 · Eligibility & technical requirements</h2>
+    <ul>
+      <li><strong>rFactor 1</strong>, fully updated, with the current season's content pack installed.</li>
+      <li>A stable connection capable of maintaining the server's ping requirements.</li>
+      <li>Voice chat access on Discord for briefings and race control communication.</li>
+    </ul>
+
+    <h2>05 · Getting help</h2>
+    <p style="color:#96a0ad;font-size:12px;line-height:1.9;margin:0">Content downloads, setup issues, or questions about a specific rule — the fastest way to get an answer is the <a href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener" style="color:var(--blue2);font-weight:700">RMC Discord ↗</a>, before race night rather than during it.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <span class="label">A HISTORIC SEASON</span><h2>COME MAKE<br><em>YOUR</em><br>HISTORY.</h2><p>Only <b>you</b> know if you can do it.</p><a class="btn blue" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Join RMC Discord ↗</a>
+</section>
+</main>
+
+<footer><div class="logo"><b>RMC</b><span>RFACTOR MULTI CHAMP'S</span></div><p>Independent rFactor 1 sim racing championship.</p><div><a href="#top">Back to top ↑</a></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
