@@ -93,8 +93,156 @@ document.querySelectorAll('.admin-tabs button').forEach(btn=>{
 
 function renderAll(){
   renderRaceSelector();
+  renderCalendarAdmin();
   renderDriversAdmin();
   renderTeamsAdmin();
+  renderRulesAdmin();
+}
+
+/* ================= RULES / POINTS TAB ================= */
+function renderPointsEditor(){
+  const grid=document.getElementById('pointsEditGrid');
+  if(!grid) return;
+  grid.innerHTML=WORKING_DATA.pointsSystem.map((p,i)=>`
+    <div class="pt-edit-cell">
+      <label>P${i+1}</label>
+      <input type="number" class="pt-edit-input" data-i="${i}" value="${p}" min="0" step="1">
+    </div>`).join('');
+
+  document.getElementById('savePointsBtn').addEventListener('click',()=>{
+    grid.querySelectorAll('.pt-edit-input').forEach(inp=>{
+      WORKING_DATA.pointsSystem[+inp.dataset.i]=+inp.value||0;
+    });
+    dirty=true;
+    showToast('Sistema de pontos atualizado. Não te esqueças de exportar o data.json.');
+  });
+}
+
+function renderRulesAdmin(){
+  const list=document.getElementById('rulesEditorList');
+  if(!list) return;
+
+  if(!WORKING_DATA.rules){
+    WORKING_DATA.rules={lastUpdated:null,version:'1.0',sections:[]};
+  }
+
+  renderPointsEditor();
+
+  function slugify(s){
+    return (s||'').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'') || 'seccao';
+  }
+
+  function draw(){
+    const sections=WORKING_DATA.rules.sections;
+    list.innerHTML=sections.map((s,i)=>`
+      <div class="admin-card rule-edit-card">
+        <div class="rule-edit-head">
+          <span class="rule-edit-num">${i+1}</span>
+          <input type="text" class="rule-edit-title" data-i="${i}" value="${s.title||''}" placeholder="Título da secção">
+          <div class="rule-edit-move">
+            <button class="rm-btn move-up" data-i="${i}" title="Mover para cima" ${i===0?'disabled':''}>↑</button>
+            <button class="rm-btn move-down" data-i="${i}" title="Mover para baixo" ${i===sections.length-1?'disabled':''}>↓</button>
+            <button class="rm-btn remove-section" data-i="${i}" title="Remover secção">✕</button>
+          </div>
+        </div>
+        <textarea class="rule-edit-content" data-i="${i}" rows="6" placeholder="Texto da secção. Usa uma linha em branco para separar parágrafos.">${s.content||''}</textarea>
+      </div>`).join('');
+
+    list.querySelectorAll('.rule-edit-title').forEach(inp=>inp.addEventListener('input',e=>{
+      const i=+e.target.dataset.i;
+      sections[i].title=e.target.value;
+      sections[i].id=slugify(e.target.value.replace(/^\d+\.?\s*/,''));
+      dirty=true;
+    }));
+    list.querySelectorAll('.rule-edit-content').forEach(ta=>ta.addEventListener('input',e=>{
+      sections[+e.target.dataset.i].content=e.target.value;
+      dirty=true;
+    }));
+    list.querySelectorAll('.move-up').forEach(btn=>btn.addEventListener('click',()=>{
+      const i=+btn.dataset.i;
+      if(i===0) return;
+      [sections[i-1],sections[i]]=[sections[i],sections[i-1]];
+      dirty=true; draw();
+    }));
+    list.querySelectorAll('.move-down').forEach(btn=>btn.addEventListener('click',()=>{
+      const i=+btn.dataset.i;
+      if(i===sections.length-1) return;
+      [sections[i+1],sections[i]]=[sections[i],sections[i+1]];
+      dirty=true; draw();
+    }));
+    list.querySelectorAll('.remove-section').forEach(btn=>btn.addEventListener('click',()=>{
+      if(!confirm('Remover esta secção do regulamento?')) return;
+      sections.splice(+btn.dataset.i,1);
+      dirty=true; draw();
+    }));
+  }
+  draw();
+
+  document.getElementById('addRuleSectionBtn').addEventListener('click',()=>{
+    WORKING_DATA.rules.sections.push({id:'nova-seccao-'+WORKING_DATA.rules.sections.length,title:'Nova secção',content:''});
+    dirty=true;
+    draw();
+  });
+
+  document.getElementById('saveRulesBtn').addEventListener('click',()=>{
+    WORKING_DATA.rules.lastUpdated=new Date().toISOString();
+    dirty=true;
+    showToast('Regulamento atualizado. Não te esqueças de exportar o data.json.');
+  });
+}
+
+/* ================= CALENDAR TAB ================= */
+function renderCalendarAdmin(){
+  const list=document.getElementById('calendarEditorList');
+  if(!list) return;
+
+  list.innerHTML=WORKING_DATA.races.map((r,i)=>{
+    if(!r.weeks || r.weeks.length!==4){
+      r.weeks=[
+        {title:'Semana de descanso e inscrição do carro',date:null},
+        {title:'Corrida for fun (25 min)',date:null},
+        {title:'Qualificação da prova',date:null},
+        {title:'Corrida oficial',date:null}
+      ];
+    }
+    return `
+    <div class="admin-card calendar-edit-card">
+      <h4 class="calendar-edit-title">Round ${r.round}${r.completed?' <span class="done-badge">✓ Concluída</span>':''}</h4>
+      <div class="admin-form-grid">
+        <div><label>Nome da corrida</label><input type="text" class="cal-name" data-i="${i}" value="${r.name||''}" placeholder="Daytona 250"></div>
+        <div><label>Pista</label><input type="text" class="cal-track" data-i="${i}" value="${r.track||''}" placeholder="Daytona International Speedway"></div>
+        <div><label>Tipo de circuito</label><input type="text" class="cal-type" data-i="${i}" value="${r.type||''}" placeholder="Oval, Road Course, Endurance…"></div>
+        <div><label>País</label><input type="text" class="cal-country" data-i="${i}" value="${r.country||''}" placeholder="USA"></div>
+      </div>
+
+      <h5 class="weeks-subtitle">Mini calendário — 4 semanas (mostrado em "Details")</h5>
+      <div class="weeks-edit-grid">
+        ${r.weeks.map((w,wi)=>`
+          <div class="week-edit-cell">
+            <label>Semana ${wi+1}</label>
+            <input type="text" class="cal-week-title" data-i="${i}" data-w="${wi}" value="${w.title||''}" placeholder="Título da semana">
+            <input type="datetime-local" class="cal-week-date" data-i="${i}" data-w="${wi}" value="${toLocalInputValue(w.date)}">
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('saveCalendarBtn').addEventListener('click',()=>{
+    list.querySelectorAll('.cal-name').forEach(inp=>{ WORKING_DATA.races[+inp.dataset.i].name=inp.value.trim(); });
+    list.querySelectorAll('.cal-track').forEach(inp=>{ WORKING_DATA.races[+inp.dataset.i].track=inp.value.trim(); });
+    list.querySelectorAll('.cal-type').forEach(inp=>{ WORKING_DATA.races[+inp.dataset.i].type=inp.value.trim(); });
+    list.querySelectorAll('.cal-country').forEach(inp=>{ WORKING_DATA.races[+inp.dataset.i].country=inp.value.trim(); });
+    list.querySelectorAll('.cal-week-title').forEach(inp=>{
+      WORKING_DATA.races[+inp.dataset.i].weeks[+inp.dataset.w].title=inp.value.trim();
+    });
+    list.querySelectorAll('.cal-week-date').forEach(inp=>{
+      const val=inp.value;
+      WORKING_DATA.races[+inp.dataset.i].weeks[+inp.dataset.w].date = val ? new Date(val).toISOString() : null;
+    });
+    dirty=true;
+    renderRaceSelector();
+    showToast('Calendário atualizado. Não te esqueças de exportar o data.json.');
+  });
 }
 
 /* ================= RACES / RESULTS TAB ================= */

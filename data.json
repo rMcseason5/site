@@ -82,7 +82,25 @@
           1
         ]
       },
-      "raceDateTime": "2026-09-22T16:40:00.000Z"
+      "raceDateTime": "2026-08-03T19:10:00.000Z",
+      "weeks": [
+        {
+          "title": "start of registrations",
+          "date": "2026-08-29T20:00:00.000Z"
+        },
+        {
+          "title": "Delivery of liveries and Race For Fun (25m)",
+          "date": "2026-09-05T16:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2026-09-12T16:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2026-09-19T16:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 2,
@@ -147,7 +165,25 @@
           1
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2026-10-17T16:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2026-09-26T20:00:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries and Race For Fun (25m)",
+          "date": "2026-10-03T16:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2026-10-10T16:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2026-10-17T16:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 3,
@@ -212,7 +248,25 @@
           0
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2026-11-14T17:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2026-10-24T20:00:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries and Race For Fun (25m)",
+          "date": "2026-10-31T17:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2026-11-07T17:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2026-11-14T17:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 4,
@@ -221,13 +275,29 @@
       "type": "Endurance",
       "country": "USA",
       "completed": false,
-      "results": [],
+      "results": [
+        {
+          "driverSlug": "tiago-souza",
+          "gap": "",
+          "penalty": 0,
+          "lapsLed": 0,
+          "points": 0,
+          "position": 1
+        }
+      ],
       "poleTime": "",
       "fastestLapTime": "",
       "fastestLapDriver": "",
       "qualifying": {
         "completed": false,
-        "results": [],
+        "results": [
+          {
+            "driverSlug": "tiago-souza",
+            "time": "",
+            "points": 0,
+            "position": 1
+          }
+        ],
         "pointsSystem": [
           5,
           4,
@@ -261,7 +331,25 @@
           0
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2026-12-12T17:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2026-11-27T21:00:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries and Race For Fun (25m)",
+          "date": "2026-11-28T17:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2026-12-05T17:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2026-12-12T17:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 5,
@@ -270,13 +358,29 @@
       "type": "Road Course",
       "country": "Australia",
       "completed": false,
-      "results": [],
+      "results": [
+        {
+          "driverSlug": "tiago-souza",
+          "gap": "",
+          "penalty": 0,
+          "lapsLed": 0,
+          "points": 0,
+          "position": 1
+        }
+      ],
       "poleTime": "",
       "fastestLapTime": "",
       "fastestLapDriver": "",
       "qualifying": {
         "completed": false,
-        "results": [],
+        "results": [
+          {
+            "driverSlug": "tiago-souza",
+            "time": "",
+            "points": 0,
+            "position": 1
+          }
+        ],
         "pointsSystem": [
           5,
           4,
@@ -310,7 +414,25 @@
           0
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2027-01-16T17:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2026-12-26T21:00:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries",
+          "date": "2027-01-02T21:00:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2027-01-09T17:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2027-01-16T17:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 6,
@@ -319,13 +441,29 @@
       "type": "Oval",
       "country": "USA",
       "completed": false,
-      "results": [],
+      "results": [
+        {
+          "driverSlug": "tiago-souza",
+          "gap": "",
+          "penalty": 0,
+          "lapsLed": 0,
+          "points": 0,
+          "position": 1
+        }
+      ],
       "poleTime": "",
       "fastestLapTime": "",
       "fastestLapDriver": "",
       "qualifying": {
         "completed": false,
-        "results": [],
+        "results": [
+          {
+            "driverSlug": "tiago-souza",
+            "time": "",
+            "points": 0,
+            "position": 1
+          }
+        ],
         "pointsSystem": [
           5,
           4,
@@ -359,7 +497,25 @@
           0
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2027-02-13T17:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2027-01-23T21:00:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries and Race For Fun (25m)",
+          "date": "2027-01-30T17:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2026-02-06T17:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2027-02-13T17:40:00.000Z"
+        }
+      ]
     },
     {
       "round": 7,
@@ -368,13 +524,29 @@
       "type": "Endurance",
       "country": "France",
       "completed": false,
-      "results": [],
+      "results": [
+        {
+          "driverSlug": "tiago-souza",
+          "gap": "",
+          "penalty": 0,
+          "lapsLed": 0,
+          "points": 0,
+          "position": 1
+        }
+      ],
       "poleTime": "",
       "fastestLapTime": "",
       "fastestLapDriver": "",
       "qualifying": {
         "completed": false,
-        "results": [],
+        "results": [
+          {
+            "driverSlug": "tiago-souza",
+            "time": "",
+            "points": 0,
+            "position": 1
+          }
+        ],
         "pointsSystem": [
           5,
           4,
@@ -408,18 +580,48 @@
           0
         ]
       },
-      "raceDateTime": null
+      "raceDateTime": "2027-03-13T17:40:00.000Z",
+      "weeks": [
+        {
+          "title": "Week of rest and car registration",
+          "date": "2027-02-20T17:40:00.000Z"
+        },
+        {
+          "title": "Delivery of Liveries and Race For Fun (25m)",
+          "date": "2027-02-27T17:40:00.000Z"
+        },
+        {
+          "title": "Qualification",
+          "date": "2027-03-06T17:40:00.000Z"
+        },
+        {
+          "title": "Official Race",
+          "date": "2027-03-13T17:40:00.000Z"
+        }
+      ]
     }
   ],
   "pointsSystem": [
+    77,
+    67,
+    62,
+    57,
+    52,
+    47,
+    42,
+    37,
+    32,
     30,
-    27,
-    25,
-    23,
-    21,
-    19,
+    28,
+    26,
+    24,
+    22,
+    20,
+    18,
     17,
+    16,
     15,
+    14,
     13,
     12,
     11,
@@ -429,19 +631,93 @@
     7,
     6,
     5,
-    4,
-    3,
-    2,
-    2,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
+    4
   ],
-  "nextRaceTarget": null
+  "nextRaceTarget": null,
+  "rules": {
+    "lastUpdated": "2026-08-08T18:14:41.026Z",
+    "version": "1.0",
+    "sections": [
+      {
+        "id": "general",
+        "title": "1. Disposições Gerais",
+        "content": "This regulation aims to ensure order, fairness, and sportsmanship in competitions organized by rMc — rFactor Multi Champ's. Infractions are assessed by the sports commissioners and classified into four levels: Minor, Medium, Serious, and Extreme, with penalties proportional to the nature of the infraction.\n\nPenalties may be applied individually or cumulatively, depending on the severity of the infraction and the driver's history.\n\nAppeals are possible within 24 hours of official notification, with review and final decision by the RMC race direction.\n\nEach penalty adds points to the driver's license (see section 6. Driver License)."
+      },
+      {
+        "id": "assists",
+        "title": "2. Assistências de Condução",
+        "content": "Controlo de Tração: Ativado\nABS: Ativado\nControlo de Estabilidade: Desativado\nMudanças Automáticas: Desativado\nAjuda de Direção: Desativado\nAjuda de Travagem: Desativado\nEmbraiagem Automática: Ativado\nInvulnerabilidade: Desativado\nPit Stop Automático: Desativado\nDanos: 50%"
+      },
+      {
+        "id": "server",
+        "title": "3. Configuração do Servidor",
+        "content": "Regras de Bandeiras: Completas\nConsumo de Combustível: x1\nDesgaste de Pneus: x1\nFalhas Mecânicas: Normal\nTreino Livre: 60 minutos\nQualificação: 20+5 minutos\nVoltas de Qualificação: Ilimitadas\nAquecimento (Warmup): 10 minutos\nTipo de Partida: Rolling Start"
+      },
+      {
+        "id": "practice",
+        "title": "4. Treino Livre",
+        "content": "Durante o treino livre, recomenda-se que o piloto se desvie caso outro carro esteja significativamente mais rápido. Qualquer piloto é livre de fazer quantas voltas quiser, com qualquer composto de pneu disponível."
+      },
+      {
+        "id": "qualifying",
+        "title": "5. Qualificação",
+        "content": "A qualificação tem a duração definida no servidor, podendo o piloto realizar quantas voltas quiser dentro desse tempo.\n\nÉ obrigatório desviar-se do caminho caso outro piloto esteja significativamente mais rápido.\n\nO uso do chat durante a sessão de qualificação é proibido — o infrator será colocado no fundo da grelha.\n\nDurante a qualificação, atalhos na volta de entrada ou saída são proibidos e puníveis após a corrida."
+      },
+      {
+        "id": "warmup",
+        "title": "6. Aquecimento (Warmup)",
+        "content": "A sessão de aquecimento serve para os pilotos carregarem o jogo, testarem o carro e prepararem os últimos detalhes antes da corrida."
+      },
+      {
+        "id": "race",
+        "title": "7. Corrida",
+        "content": "O uso do chat durante a corrida é proibido.\n\nA corrida arranca em formação de fila única com delta controlado. Os pilotos devem manter a velocidade delta definida pela direção de prova até ao período de pit limiter. No início do último setor, todos os carros devem estar lado a lado e usar o limitador de pit lane.\n\nO piloto na frente deve manter uma velocidade constante; o resto do pelotão deve manter uma distância de segurança entre si.\n\nOs pilotos devem seguir as indicações da direção de prova em tempo real:\n\"INÍCIO DA VOLTA DE FORMAÇÃO. FILA ÚNICA, DELTA CONTROLADO\"\n\"LADO A LADO, PIT LIMITER\"\n\"BANDEIRA VERDE\"\n\nA direção de prova arranca a corrida, não o piloto em pole position.\n\nEm caso de acidente grave na primeira volta, pode ser feito um único reinício, a critério da direção de prova.\n\nEm caso de Full Course Yellow (FCY), todos os competidores devem seguir as decisões da direção de prova em tempo real, ativando o limitador de pit lane assim que o FCY for anunciado.\n\nA corrida será considerada oficial ao completar 50% do tempo total. Se a corrida não atingir os 50%, contará apenas metade da pontuação total.\n\nNo final da corrida, os pilotos devem aguardar que o último concorrente complete a última volta antes de sair do servidor."
+      },
+      {
+        "id": "pits",
+        "title": "8. Regras de Pit Lane",
+        "content": "O direito de prioridade baseia-se em quem está à frente na faixa rápida da pit lane.\n\nOs carros que saem do pit stop devem garantir que reentram num local seguro da faixa rápida.\n\nSe dois pilotos estiverem lado a lado à saída da pit lane, o piloto à frente tem prioridade.\n\nOs pilotos que entram e saem das boxes devem manter-se dentro das linhas brancas correspondentes.\n\nApós sair das boxes, o piloto deve regressar à linha de corrida apenas depois de confirmar que é seguro fazê-lo."
+      },
+      {
+        "id": "flags",
+        "title": "9. Regras de Bandeiras",
+        "content": "Bandeira Amarela: existe uma perturbação nessa parte da pista — atenção redobrada. Pode anteceder um FCY.\n\nBandeira Vermelha: a corrida é interrompida devido a um acidente grave, problema de servidor ou desconexão involuntária. Os administradores/comissários ativos decidirão os próximos passos.\n\nBandeira de Quadrados: chegaste à meta — abranda e faz a volta de arrefecimento.\n\nBandeira Azul: estás a ser ultrapassado por um carro mais rápido — tens uma curva e uma reta para te desviares.\n\nSe o carro de um piloto avariar, este deve sair da pista com segurança assim que possível e retirar o carro do traçado."
+      },
+      {
+        "id": "overtaking",
+        "title": "10. Regras de Ultrapassagem",
+        "content": "O carro que ultrapassa está \"em posição\" se as rodas dianteiras estiverem, no mínimo, ao nível da roda traseira do defensor.\n\nAo entrar na curva, se o ultrapassante estiver em posição, o defensor deve deixar pelo menos o espaço de um carro, contado a partir dos limites da pista. Se o ultrapassante não estiver em posição, o defensor não é obrigado a deixar qualquer espaço.\n\nÀ saída da curva, quem estiver à frente e em posição tem direito a espaço equivalente por parte do outro piloto.\n\nSe o carro que ultrapassa empurrar o defensor durante a curva e ganhar vantagem com isso, será penalizado.\n\nEm reta, o defensor pode fazer até 2 ajustes de trajetória, desde que deixe espaço suficiente caso o carro ultrapassante esteja lado a lado.\n\nEm caso de perda de controlo durante uma ultrapassagem, independentemente do outro piloto, a responsabilidade é do piloto que perdeu o controlo."
+      },
+      {
+        "id": "trucklimits",
+        "title": "11. Limites de Pista",
+        "content": "Os limites de pista são determinados e controlados pela direção de prova, podendo a punição por violações repetidas variar de circuito para circuito.\n\nGanhar uma posição ou vantagem duradoura ao sair da pista é contra as regras e pode resultar em penalização, independentemente de qualquer aviso ou penalização emitida pelo próprio jogo.\n\nOs pilotos devem abrandar e/ou devolver a posição (se a tiverem ganho ilegalmente) assim que for seguro fazê-lo, para evitar penalização."
+      },
+      {
+        "id": "infractions",
+        "title": "12. Classificação de Infrações",
+        "content": "A direção de prova é responsável por avaliar a gravidade das infrações. Cada nível de gravidade pode originar diferentes tipos de penalização, além de diferentes quantidades de pontos acrescentados à licença do piloto.\n\nPilotos que demonstrem fair play após causar um incidente podem receber uma penalização reduzida face à sanção padrão para a mesma infração — sem fair play. Esta redução não é garantida e é concedida apenas ao critério da direção de prova.\n\n— INFRAÇÕES LIGEIRAS —\nContacto leve e não intencional.\nPenalizações possíveis: aviso; até 1 ponto na licença; adição de até 5 segundos ao tempo final de corrida.\n\n— INFRAÇÕES MÉDIAS —\nContacto não intencional com desvantagem notável; regresso inseguro à pista; bloqueio indevido; excesso de velocidade na pit lane; partida antecipada (jump start); exceder repetidamente os limites de pista; violação do procedimento de safety car.\nPenalizações possíveis: até 3 pontos na licença; adição de até 15 segundos ao tempo final; perda de posições na próxima qualificação; partida das boxes na próxima ronda; exclusão da próxima sessão de qualificação.\n\n— INFRAÇÕES GRAVES —\nUso indevido do chat durante a corrida; uso de exploit de pista; incumprimento das informações passadas no briefing; jogo de equipa ilegal (um piloto comete uma infração que beneficia a si próprio e/ou a equipa/organização com que tem associação direta ou indireta).\nPenalizações possíveis: até 5 pontos na licença; adição de até 30 segundos ao tempo final; suspensão até 3 rondas; expulsão do campeonato com efeito suspenso (efetivo apenas em caso de reincidência).\n\n— INFRAÇÕES EXTREMAS —\nConduta antidesportiva (vingança em pista, contacto intencional); batota; discurso ofensivo contra qualquer membro do servidor.\nPenalizações possíveis: até 8 pontos na licença; banimento da liga (por período determinado ou indeterminado); expulsão do campeonato em curso."
+      },
+      {
+        "id": "license",
+        "title": "13. Licença do Piloto",
+        "content": "Os pilotos têm um limite de pontos na licença. Ao atingir um determinado limite, o piloto recebe uma penalização sem possibilidade de recurso:\n\n8 pontos → Exclusão da próxima sessão de qualificação\n10 pontos → Partida das boxes na ronda seguinte\n12 pontos → Suspensão de 1 corrida em todos os campeonatos ativos\n14 pontos → Exclusão da época e suspensão por um período de 2 meses\n\nOs pilotos têm os seus pontos repostos a zero no final de cada época."
+      },
+      {
+        "id": "teams-signup",
+        "title": "14. Inscrição de Equipas",
+        "content": "Os dados de inscrição devem ser preenchidos corretamente — inscrições incompletas ou incorretas podem não ser aceites.\n\nA submissão de uma inscrição não garante participação automática. A organização do RMC reserva-se o direito de aceitar ou recusar qualquer equipa ou piloto.\n\nO nome da equipa não pode ser de cariz racista, religioso ou discriminatório.\n\nUma vez inscrito numa equipa, o piloto só pode mudar de equipa durante a época mediante autorização especial da organização."
+      },
+      {
+        "id": "liveries",
+        "title": "15. Liveries e Identidade Visual",
+        "content": "Não é permitida a utilização de marcas de tabaco ou álcool.\n\nCada carro pode ter uma livery diferente, com patrocinadores diferentes.\n\nA organização do RMC reserva-se o direito de modificar ou rejeitar qualquer livery. A livery não pode conter ou insinuar conteúdo impróprio, incluindo (mas não limitado a) conteúdo sexual, alcoólico, de tabaco, drogas ou jogo.\n\nSe a livery submetida não cumprir as regras, os administradores não a corrigirão — essa responsabilidade é de cada equipa. Quem não submeter uma livery adequada dentro do prazo poderá não competir nessa ronda."
+      },
+      {
+        "id": "appeals",
+        "title": "16. Recursos e Considerações Finais",
+        "content": "O piloto penalizado pode solicitar revisão da decisão no prazo de 24 horas após a notificação oficial.\n\nUm piloto não pode recorrer de uma penalização imposta a outro piloto.\n\nUm piloto pode recorrer do resultado da corrida, solicitando o seu cancelamento.\n\nO recurso deve conter argumentos concretos sobre porque a penalização deve ser anulada, e será analisado por uma comissão independente.\n\nO resultado do recurso é final, sem possibilidade de novo recurso.\n\nA organização tem o direito de negar um pedido de recurso caso a submissão careça de provas concretas ou de um argumento coerente.\n\nPilotos banidos/suspensos não têm direito a reembolso de taxas de inscrição pagas, nem acesso a eventuais prémios durante o período de suspensão.\n\nA direção de prova pode fazer alterações à aplicação deste regulamento sempre que necessário, de forma a evitar abusos das regras."
+      }
+    ]
+  }
 }

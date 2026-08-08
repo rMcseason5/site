@@ -354,6 +354,25 @@ function renderCalendar(data){
   const calWrap=document.getElementById('calendarWrap');
   if(!calWrap) return;
   const next=getNextRace(data);
+
+  function weekDateLabel(dateStr){
+    if(!dateStr) return 'Data por anunciar';
+    const d=new Date(dateStr);
+    if(isNaN(d.getTime())) return 'Data por anunciar';
+    return d.toLocaleDateString('pt-PT',{weekday:'short',day:'2-digit',month:'short'});
+  }
+
+  function miniWeeksHTML(r){
+    const weeks = r.weeks && r.weeks.length ? r.weeks : [];
+    if(!weeks.length) return '';
+    return `<div class="mini-calendar">
+      ${weeks.map((w,i)=>`<div class="mini-week">
+        <span class="mini-week-num">S${i+1}</span>
+        <div class="mini-week-body"><b>${w.title||'—'}</b><small>${weekDateLabel(w.date)}</small></div>
+      </div>`).join('')}
+    </div>`;
+  }
+
   calWrap.innerHTML=data.races.map(r=>{
     const cls = r.completed ? 'done' : (next&&r.round===next.round ? 'next' : '');
     const badge = r.completed ? '✓' : (next&&r.round===next.round?'NEXT':'—');
@@ -361,7 +380,10 @@ function renderCalendar(data){
       <div class="rno">${String(r.round).padStart(2,'0')}</div>
       <div class="rinfo"><small>${r.completed?'COMPLETED':(next&&r.round===next.round?'NEXT UP':'UPCOMING')} · ${r.country.toUpperCase()}</small><h3>${r.name}</h3><span>${r.type}</span></div>
       <strong class="round-toggle">${badge==='✓'?'✓ Details':badge==='NEXT'?'Details':'Details'}</strong>
-      <div class="round-detail">${r.track} — ${r.type} round in ${r.country}.${r.completed?' Final classification is available on the Results page.':''}</div>
+      <div class="round-detail">
+        <p>${r.track} — ${r.type} round in ${r.country}.${r.completed?' Final classification is available on the Results page.':''}</p>
+        ${miniWeeksHTML(r)}
+      </div>
     </article>`;
   }).join('');
   document.querySelectorAll('.round-toggle').forEach(el=>{
@@ -373,6 +395,26 @@ function renderPointsTable(data){
   const el=document.getElementById('pointsTable');
   if(!el) return;
   el.innerHTML=data.pointsSystem.map((p,i)=>`<div class="pt-cell"><b>${p}</b><span>P${i+1}</span></div>`).join('');
+}
+
+function renderRules(data){
+  const el=document.getElementById('rulesFullContent');
+  if(!el) return;
+  const rules=data.rules;
+  if(!rules || !rules.sections || !rules.sections.length){
+    el.innerHTML='<p style="color:#657080;font-size:12px">O regulamento ainda não foi definido.</p>';
+    return;
+  }
+  el.innerHTML=rules.sections.map(s=>`
+    <h2 id="rule-${s.id}">${s.title}</h2>
+    ${(s.content||'').split('\n\n').map(para=>`<p style="color:#96a0ad;font-size:12px;line-height:1.9;white-space:pre-line;margin:0 0 16px">${para}</p>`).join('')}
+  `).join('');
+
+  const metaEl=document.getElementById('rulesMeta');
+  if(metaEl){
+    const updated = rules.lastUpdated ? new Date(rules.lastUpdated).toLocaleDateString('pt-PT',{day:'2-digit',month:'long',year:'numeric'}) : 'por definir';
+    metaEl.textContent = `Versão ${rules.version||'1.0'} · Última atualização: ${updated}`;
+  }
 }
 
 /* ---------- Scroll reveal ---------- */
@@ -397,5 +439,6 @@ function initScrollReveal(){
   renderResultsPage(data);
   renderCalendar(data);
   renderPointsTable(data);
+  renderRules(data);
   initScrollReveal();
 })();

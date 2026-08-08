@@ -114,6 +114,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue2);outline-offs
 .round-detail{margin-top:8px;padding-top:14px;border-top:1px solid var(--line);font-size:10px;color:#8791a0;line-height:1.7;grid-column:1/-1}
 .round.expanded .round-detail{display:block}
 .round-detail{display:none}
+.round-detail p{margin:0 0 14px}
+.mini-calendar{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.mini-week{border:1px solid var(--line);background:#0d0a08;padding:12px}
+.mini-week-num{display:block;font:800 10px "Barlow Condensed";color:var(--blue2);letter-spacing:1px;margin-bottom:8px}
+.mini-week-body b{display:block;font-size:9px;font-weight:700;color:#e5e0d5;line-height:1.4;margin-bottom:5px}
+.mini-week-body small{display:block;font-size:8px;color:#8a8072}
+@media(max-width:600px){.mini-calendar{grid-template-columns:1fr 1fr}}
 .round-toggle{cursor:pointer}
 
 /* ===== Championship / standings ===== */
@@ -224,7 +231,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue2);outline-offs
 .rules-grid p{font-size:10px;color:#737e8c;line-height:1.7}
 .rules-grid a{position:absolute;bottom:24px;color:var(--blue2);font-size:8px;text-transform:uppercase;font-weight:800;letter-spacing:1px}
 .rules-full{max-width:820px}
-.rules-full h2{font:800 22px "Barlow Condensed";text-transform:uppercase;letter-spacing:.5px;margin:52px 0 14px;padding-top:24px;border-top:1px solid var(--line)}
+.rules-meta{font-size:9px;color:#697482;letter-spacing:.5px;margin-bottom:8px}
+.rules-full h2{font:800 22px "Barlow Condensed";text-transform:uppercase;letter-spacing:.5px;margin:52px 0 14px;padding-top:24px;border-top:1px solid var(--line);scroll-margin-top:100px}
 .rules-full h2:first-child{margin-top:0;padding-top:0;border-top:0}
 .rules-full ol,.rules-full ul{margin:0;padding-left:18px;color:#96a0ad;font-size:12px;line-height:1.9}
 .rules-full li strong{color:#d7dce2;font-weight:700}
@@ -296,6 +304,38 @@ footer a:hover{color:var(--blue2)}
 .admin-race-select{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
 .admin-card{border:1px solid var(--line);background:#12100c;padding:24px;margin-bottom:16px}
 .admin-card h3{font:700 18px "Barlow Condensed";text-transform:uppercase;margin:0 0 16px}
+.calendar-edit-card{padding:20px 24px}
+.calendar-edit-title{font:700 14px "Barlow Condensed";text-transform:uppercase;letter-spacing:.5px;margin:0 0 14px;color:#c9c2b0;display:flex;align-items:center;gap:10px}
+.done-badge{font-size:8px;font-weight:800;color:var(--green);letter-spacing:.5px;text-transform:none}
+.weeks-subtitle{font-size:9px;color:#8a8072;text-transform:uppercase;letter-spacing:1px;margin:22px 0 12px;padding-top:18px;border-top:1px solid var(--line)}
+.weeks-edit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.week-edit-cell{border:1px solid var(--line);background:#0d0a08;padding:12px;display:flex;flex-direction:column;gap:6px}
+.week-edit-cell label{font-size:7px;color:#697482;letter-spacing:1px;text-transform:uppercase}
+.week-edit-cell input{background:#05070a;border:1px solid var(--line2);color:#fff;padding:7px 8px;font-size:9px;font-family:Inter}
+.week-edit-cell input:focus{outline:1px solid var(--blue2);border-color:transparent}
+@media(max-width:900px){.weeks-edit-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.weeks-edit-grid{grid-template-columns:1fr}}
+
+.points-edit-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.pt-edit-cell{border:1px solid var(--line);background:#0d0a08;padding:8px;text-align:center}
+.pt-edit-cell label{display:block;font-size:7px;color:#697482;letter-spacing:.5px;margin-bottom:5px}
+.pt-edit-cell input{width:100%;background:#05070a;border:1px solid var(--line2);color:#fff;padding:6px 4px;font-size:11px;font-family:Inter;text-align:center}
+.pt-edit-cell input:focus{outline:1px solid var(--blue2);border-color:transparent}
+@media(max-width:900px){.points-edit-grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:600px){.points-edit-grid{grid-template-columns:repeat(5,1fr)}}
+
+.rule-edit-card{padding:18px 22px;margin-bottom:10px}
+.rule-edit-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.rule-edit-num{font:800 16px "Barlow Condensed";color:#4e5b69;flex-shrink:0;width:24px}
+.rule-edit-title{flex:1;background:#05070a;border:1px solid var(--line2);color:#fff;padding:9px 12px;font-size:11px;font-weight:700;font-family:Inter}
+.rule-edit-title:focus{outline:1px solid var(--blue2);border-color:transparent}
+.rule-edit-move{display:flex;gap:4px;flex-shrink:0}
+.rule-edit-move button{background:#0d0a08;border:1px solid var(--line);color:#8b95a3;width:26px;height:26px;cursor:pointer;font-size:11px}
+.rule-edit-move button:hover:not(:disabled){border-color:var(--blue2);color:#fff}
+.rule-edit-move button:disabled{opacity:.3;cursor:not-allowed}
+.rule-edit-move .remove-section{color:#ff6b6b}
+.rule-edit-content{width:100%;background:#05070a;border:1px solid var(--line2);color:#c9c2b0;padding:12px;font-size:11px;font-family:Inter;line-height:1.7;resize:vertical}
+.rule-edit-content:focus{outline:1px solid var(--blue2);border-color:transparent}
 .admin-grid-row{display:grid;grid-template-columns:32px 1.6fr 1fr 1fr .8fr repeat(2,60px) 32px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
 .admin-grid-row:last-child{border-bottom:0}
 .admin-grid-head{font-size:7px;color:#5e6977;letter-spacing:1px;text-transform:uppercase;padding-bottom:8px}

@@ -29,14 +29,27 @@
   <div class="admin-body">
     <div class="admin-tabs">
       <button class="active" data-tab="races">Corridas & Resultados</button>
+      <button data-tab="calendar">Calendário</button>
       <button data-tab="drivers">Pilotos</button>
       <button data-tab="teams">Equipas</button>
+      <button data-tab="rules">Regulamento</button>
       <button data-tab="export">Guardar / Exportar</button>
     </div>
 
     <div class="admin-panel active" id="panel-races">
       <div class="admin-race-select" id="adminRaceSelect"></div>
       <div id="raceEditorBody"></div>
+    </div>
+
+    <div class="admin-panel" id="panel-calendar">
+      <div class="admin-card">
+        <h3>Editar calendário da época</h3>
+        <p style="color:#8a8072;font-size:11px;margin:0 0 20px;line-height:1.7">Nome da corrida, pista, tipo de circuito e país. Datas e resultados editam-se no separador "Corridas & Resultados".</p>
+        <div id="calendarEditorList"></div>
+        <div class="admin-actions">
+          <button class="admin-btn primary" id="saveCalendarBtn" type="button">Guardar alterações ao calendário</button>
+        </div>
+      </div>
     </div>
 
     <div class="admin-panel" id="panel-drivers">
@@ -76,6 +89,27 @@
         <h3>Equipas atuais</h3>
         <p style="color:#657080;font-size:9px;margin:0 0 14px">Clica no logo de uma equipa para o mudar.</p>
         <div class="entity-list-photos" id="teamsList"></div>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="panel-rules">
+      <div class="admin-card">
+        <h3>Sistema de pontos (30 posições)</h3>
+        <p style="color:#8a8072;font-size:11px;margin:0 0 16px;line-height:1.7">Pontos atribuídos por posição, do 1º ao 30º lugar. Usados tanto na corrida como na qualificação de cada ronda (a qualificação tem a sua própria tabela por corrida, editável no separador "Corridas & Resultados").</p>
+        <div class="points-edit-grid" id="pointsEditGrid"></div>
+        <div class="admin-actions">
+          <button class="admin-btn primary" id="savePointsBtn" type="button">Guardar sistema de pontos</button>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Regulamento — secções</h3>
+        <p style="color:#8a8072;font-size:11px;margin:0 0 16px;line-height:1.7">Edita título e texto de cada secção. Usa uma linha em branco para separar parágrafos. A ordem aqui é a ordem em que aparecem na página Rules.</p>
+        <div id="rulesEditorList"></div>
+        <div class="admin-actions">
+          <button class="admin-btn ghost" id="addRuleSectionBtn" type="button">+ Adicionar secção</button>
+          <button class="admin-btn primary" id="saveRulesBtn" type="button">Guardar regulamento</button>
+        </div>
       </div>
     </div>
 
