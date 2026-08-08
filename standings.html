@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drivers Championship — RMC</title>
+<meta name="description" content="Classificação de pilotos do RMC Season 05. Grelha de 30 pilotos, 10 equipas, pontuação ronda a ronda.">
+<meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html"><b>RMC</b><span>rFactor Multi Champ's</span></a>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Calendar</a>
+    <a class="active" href="standings.html">Drivers</a>
+    <a href="teams.html">Teams</a>
+    <a href="results.html">Results</a>
+    <a href="rules.html">Rules</a>
+  </nav>
+  <a class="discord" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Discord<span>↗</span></a>
+  <button class="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+</header>
+
+<main id="top">
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Drivers Championship</div>
+  <h1>30 drivers.<br><em>One grid.</em></h1>
+  <p>The full Season 05 lineup. Ten teams, thirty drivers, seven rounds to separate them.</p>
+  <div class="page-hero-number" aria-hidden="true">30</div>
+</section>
+
+<section class="section championship reveal">
+  <div class="section-head simple"><div><span class="label">THE GRID</span><h2>Drivers'<br><em>championship.</em></h2></div><div class="season">SEASON 05</div></div>
+
+  <div class="roster-toolbar">
+    <div class="roster-search"><input type="text" id="rosterSearch" placeholder="Search driver or team…" aria-label="Search driver or team"></div>
+    <div class="view-toggle" role="group" aria-label="Change view">
+      <button class="active" data-view="table">Table</button>
+      <button data-view="cards">Cards</button>
+    </div>
+  </div>
+
+  <div id="tableView">
+    <div class="leaderboard-scroll">
+      <div class="leaderboard">
+        <div class="lb-head"><span>POS</span><span>DRIVER</span><span>TEAM</span><span>R1</span><span>R2</span><span>R3</span><span>R4</span><span>R5</span><span>R6</span><span>R7</span><span>PTS</span></div>
+        <div id="standingsBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cardView" style="display:none">
+    <div class="roster-grid" id="rosterGrid"></div>
+  </div>
+
+  <div class="points-note"><span>POINTS SYSTEM</span><span>Race + Qualifying combined · scored to 30th place · full table in Rules</span></div>
+</section>
+
+<section class="final-cta">
+  <span class="label">A HISTORIC SEASON</span><h2>COME MAKE<br><em>YOUR</em><br>HISTORY.</h2><p>Only <b>you</b> know if you can do it.</p><a class="btn blue" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Join RMC Discord ↗</a>
+</section>
+</main>
+
+<footer><div class="logo"><b>RMC</b><span>RFACTOR MULTI CHAMP'S</span></div><p>Independent rFactor 1 sim racing championship.</p><div><a href="#top">Back to top ↑</a></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RMC — rFactor Multi Champ's</title>
+<meta name="description" content="rFactor Multi Champ's — campeonato de sim racing independente. 7 corridas icónicas, 1 campeão. Junta-te à Season 05.">
+<meta name="theme-color" content="#05070a">
+<meta property="og:title" content="RMC — rFactor Multi Champ's">
+<meta property="og:description" content="30 pilotos. 10 equipas. Season 05 a decorrer — junta-te ao Discord.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html"><b>RMC</b><span>rFactor Multi Champ's</span></a>
+  <nav id="mainNav">
+    <a class="active" href="index.html">Home</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="standings.html">Drivers</a>
+    <a href="teams.html">Teams</a>
+    <a href="results.html">Results</a>
+    <a href="rules.html">Rules</a>
+  </nav>
+  <a class="discord" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Discord<span>↗</span></a>
+  <button class="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="live"><i></i>Inscrições Abertas!</div>
+    <p class="kicker">rMc Season 05</p>
+    <h1>30 Drivers<br><em>1 champion.</em></h1>
+    <p class="lead">The Seven most iconic races in the world. One Champion. Everything you need to race, from the first briefing to the chequered flag.</p>
+    <div class="hero-actions">
+      <a class="btn blue" href="#next-race">We Are Waiting for You<span>→</span></a>
+      <a class="btn line" href="calendar.html">Full calendar</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div><small>ROUND</small><strong id="roundNow">01<span>/07</span></strong></div>
+    <div><small>NEXT RACE</small><strong id="nextTrackName">—</strong></div>
+    <div><small>STATUS</small><strong class="green">OPEN</strong></div>
+  </div>
+  <div class="hero-number" aria-hidden="true">05</div>
+</section>
+
+<section class="ticker"><div><span>rFactor Multi Championship</span><b>●</b> SEASON 05 <b>●</b> 7 ROUNDS <b>●</b> 3 WEEKS BETWEEN RACES <b>●</b> RFACTOR 1</div></section>
+
+<section class="next section reveal" id="next-race">
+  <div class="section-head">
+    <div><span class="label" id="briefRoundNum">NEXT RACE</span><h2 id="briefTrackName">—</h2><p>Countdown to lights out</p></div>
+    <div class="countdown">
+      <small>STARTS IN</small>
+      <div><b id="days">00</b><span>DAYS</span></div>
+      <div><b id="hours">00</b><span>HRS</span></div>
+      <div><b id="mins">00</b><span>MIN</span></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:flex-end">
+    <p class="countdown-date" id="countdownDate"></p>
+    <p class="countdown-not-set" id="countdownNotSet" style="display:none">Data e hora ainda não definidas para esta corrida.</p>
+  </div>
+  <div class="brief-grid">
+    <article class="brief main-brief">
+      <div class="brief-top"><span class="tag blue-tag">RACE BRIEFING</span><span id="nextRaceName">—</span></div>
+      <h3 id="briefTrackFull">—</h3>
+      <div class="specs">
+        <div><small>FORMAT</small><b>Race</b></div>
+        <div><small>CLASS</small><b>Season 05 Grid</b></div>
+        <div><small>SERVER</small><b>RMC Official</b></div>
+        <div><small>PLATFORM</small><b>rFactor 1</b></div>
+      </div>
+      <a class="text-btn" href="rules.html">Read race procedure →</a>
+    </article>
+    <article class="brief weather">
+      <span class="label">QUICK CHECKLIST</span>
+      <ul>
+        <li><i class="ok">✓</i><span>rFactor 1 installed & updated</span></li>
+        <li><i class="ok">✓</i><span>Warmed Hands</span></li>
+        <li><i class="ok">✓</i><span>Join server before briefing</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="section-head simple"><div><span class="label">SEASON 05</span><h2>Season<br><em>at a glance.</em></h2></div></div>
+  <div class="progress-strip" id="progressStrip"></div>
+  <div class="info-cards" id="infoCards"></div>
+</section>
+
+<section class="section results reveal" id="results">
+  <div class="section-head simple"><div><span class="label">LATEST CLASSIFICATION</span><h2 id="latestRaceName">—</h2></div><a class="text-btn" href="standings.html">View championship →</a></div>
+  <div class="result-wrap">
+    <div class="result-list" id="latestResult"></div>
+    <aside class="fastest" id="latestFastestBox">
+      <span class="label">RACE DATA</span>
+      <div class="data-big" id="latestWinner">— <small>WINNER</small></div>
+      <p>Not yet raced</p>
+      <hr>
+      <small>FASTEST LAP</small><strong id="latestFastestLap">—</strong>
+      <small>POLE POSITION</small><strong id="latestPole">—</strong>
+    </aside>
+  </div>
+</section>
+
+<section class="final-cta">
+  <span class="label">A HISTORIC SEASON</span><h2>COME MAKE<br><em>YOUR</em><br>HISTORY.</h2><p>Only <b>you</b> know if you can do it.</p><a class="btn blue" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Join RMC Discord ↗</a>
+</section>
+</main>
+
+<footer><div class="logo"><b>RMC</b><span>RFACTOR MULTI CHAMP'S</span></div><p>Independent rFactor 1 sim racing championship.</p><div><a href="#top">Back to top ↑</a></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

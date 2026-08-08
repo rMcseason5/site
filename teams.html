@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teams Championship — RMC</title>
+<meta name="description" content="Classificação de equipas do RMC Season 05. Pontuação combinada de todos os pilotos de cada equipa, ronda a ronda.">
+<meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="topbar">
+  <a class="logo" href="index.html"><b>RMC</b><span>rFactor Multi Champ's</span></a>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="standings.html">Drivers</a>
+    <a class="active" href="teams.html">Teams</a>
+    <a href="results.html">Results</a>
+    <a href="rules.html">Rules</a>
+  </nav>
+  <a class="discord" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Discord<span>↗</span></a>
+  <button class="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+</header>
+
+<main id="top">
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Teams Championship</div>
+  <h1>10 teams.<br><em>One title.</em></h1>
+  <p>Team points are the combined total of every driver on the roster, round by round.</p>
+  <div class="page-hero-number" aria-hidden="true">10</div>
+</section>
+
+<section class="section championship reveal">
+  <div class="section-head simple"><div><span class="label">CONSTRUCTORS</span><h2>Teams'<br><em>championship.</em></h2></div><div class="season">SEASON 05</div></div>
+
+  <div class="leaderboard-scroll">
+    <div class="leaderboard">
+      <div class="team-head"><span>POS</span><span>TEAM</span><span>R1</span><span>R2</span><span>R3</span><span>R4</span><span>R5</span><span>R6</span><span>R7</span><span>PTS</span></div>
+      <div id="teamsBody"></div>
+    </div>
+  </div>
+  <div class="points-note"><span>SCORING</span><span>Sum of all drivers' points per team, per round</span></div>
+</section>
+
+<section class="final-cta">
+  <span class="label">A HISTORIC SEASON</span><h2>COME MAKE<br><em>YOUR</em><br>HISTORY.</h2><p>Only <b>you</b> know if you can do it.</p><a class="btn blue" href="https://discord.gg/MnqRKhebvh" target="_blank" rel="noopener">Join RMC Discord ↗</a>
+</section>
+</main>
+
+<footer><div class="logo"><b>RMC</b><span>RFACTOR MULTI CHAMP'S</span></div><p>Independent rFactor 1 sim racing championship.</p><div><a href="#top">Back to top ↑</a></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
